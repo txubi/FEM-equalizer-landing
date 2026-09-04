@@ -69,13 +69,17 @@ footer span {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fcfaf9;
+}
+
 .logo {
   width: 144px;
   height: 32px;
 }
 
 header {
-  background-color: #fafafa;
+  background-color: #fcfaf9;
   background-image: url("/img/bg-main-mobile.png");
   background-size: 384px 655px;
   background-position: 120px -170px;
@@ -182,4 +186,6 @@ footer .social-media-buttons {
   height: 20px;
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -68,12 +68,15 @@ $yellow: rgb(255, 185, 100);
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: $white;
+}
 .logo {
   width: 144px;
   height: 32px;
 }
 header {
-  background-color: #fafafa;
+  background-color: $white;
   background-image: url("/img/bg-main-mobile.png");
   background-size: 384px 655px;
   background-position: 120px -170px;
