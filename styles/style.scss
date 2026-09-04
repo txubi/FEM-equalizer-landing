@@ -118,7 +118,6 @@ header {
       height: 465px;
       width: 312px;
       top: 0;
-      left: 0;
     }
   }
 
@@ -163,6 +162,12 @@ header {
     border-radius: 12px; /* Slightly rounded corners */
     cursor: pointer; /* Changes cursor to a hand tool */
   }
+  .button-bank {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .ios-button {
     margin-bottom: 16px;
     @extend %text-preset-6;
@@ -187,6 +192,7 @@ header {
     color: $slate;
     margin-bottom: 46px;
     @extend %text-preset-6;
+    left: 0;
     &::before {
       content: ""; /* Required for the pseudo-element to render */
       display: inline-block; /* Allows setting width and height */
