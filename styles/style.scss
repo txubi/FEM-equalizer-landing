@@ -268,12 +268,21 @@ footer {
     width: 504px;
     font-size: 18px;
   }
+  .clip {
+    left: 0;
+  }
+  .decorative-middle .clip .decorative-background {
+    margin: 0;
+  }
   .decorative-middle {
     border-radius: 16px;
     z-index: 50;
     width: 680px;
     height: 600px;
     margin: 0 auto;
+  }
+  .decorative-middle .clip {
+    height: 600px;
   }
   .decorative-middle img {
     height: 566px;
