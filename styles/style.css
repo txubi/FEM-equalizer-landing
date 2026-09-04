@@ -9,7 +9,29 @@ header p:first-of-type {
   line-height: 100%;
 }
 
-header p:last-of-type {
+.main-cta div span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 64px;
+  letter-spacing: 0px;
+  line-height: 100%;
+}
+
+.main-cta h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 40px;
+  letter-spacing: 0px;
+  line-height: 110%;
+}
+
+.main-cta div, .main-cta p, header p:last-of-type {
   font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -20,8 +42,36 @@ header p:last-of-type {
   line-height: 150%;
 }
 
+footer p,
+footer span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 150%;
+}
+
+.main-cta .android-button, .main-cta .ios-button {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 180%;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.logo {
+  width: 144px;
+  height: 32px;
 }
 
 header {
@@ -30,6 +80,7 @@ header {
   background-size: 384px 655px;
   background-position: 120px -170px;
   padding: 64px 20px;
+  margin-bottom: 100px;
   color: #191826;
 }
 header p:first-of-type {
@@ -39,7 +90,96 @@ header p:last-of-type {
   font-size: 16px;
 }
 
+.decorative-middle {
+  background-color: #191826;
+  background-image: url("/img/bg-pattern-1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .decorative-middle img {
   height: 430px;
-  width: auto;
+  transform: translateY(-100px);
+}
+
+.main-cta {
+  color: #191826;
+  background-color: #fa7453;
+  padding: 48px 20px;
+}
+.main-cta h1 {
+  margin: 0;
+  padding: 0;
+}
+.main-cta .custom-button {
+  /* 1. Reset default browser styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  /* 2. Visual appearance */
+  height: 64px;
+  width: 335px;
+  border-radius: 12px; /* Slightly rounded corners */
+  cursor: pointer; /* Changes cursor to a hand tool */
+}
+.main-cta .ios-button {
+  margin-bottom: 16px;
+  margin-top: 48px;
+  background-color: #191826;
+  color: #fcfaf9;
+}
+.main-cta .ios-button::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("/img/icon-apple.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.main-cta .android-button {
+  background-color: #fcfaf9;
+  color: #191826;
+  margin-bottom: 46px;
+}
+.main-cta .android-button::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("/img/icon-android.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+
+footer {
+  padding: 64px 12px;
+  height: 357px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer p {
+  margin: 0px;
+}
+footer span {
+  font-weight: 900;
+}
+footer .social-media-buttons {
+  width: 120px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

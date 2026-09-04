@@ -14,6 +14,26 @@ $yellow: rgb(255, 185, 100);
   letter-spacing: -1px;
   line-height: 100%;
 }
+%text-preset-2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 64px;
+  letter-spacing: 0px;
+  line-height: 100%;
+}
+%text-preset-3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 40px;
+  letter-spacing: 0px;
+  line-height: 110%;
+}
 %text-preset-4 {
   font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
@@ -24,9 +44,33 @@ $yellow: rgb(255, 185, 100);
   letter-spacing: 0px;
   line-height: 150%;
 }
+%text-preset-5 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 150%;
+}
+%text-preset-6 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 180%;
+}
 
 * {
   box-sizing: border-box;
+}
+.logo {
+  width: 144px;
+  height: 32px;
 }
 header {
   background-color: #fafafa;
@@ -34,6 +78,7 @@ header {
   background-size: 384px 655px;
   background-position: 120px -170px;
   padding: 64px 20px;
+  margin-bottom: 100px;
   color: $slate;
   p {
     &:first-of-type {
@@ -47,8 +92,111 @@ header {
   }
 }
 .decorative-middle {
+  background-color: $slate;
+  background-image: url("/img/bg-pattern-1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   img {
     height: 430px;
-    width: auto;
+    transform: translateY(-100px);
+  }
+}
+.main-cta {
+  color: $slate;
+  background-color: $orange;
+  padding: 48px 20px;
+  h1 {
+    @extend %text-preset-3;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    @extend %text-preset-4;
+  }
+  div {
+    @extend %text-preset-4;
+    span {
+      @extend %text-preset-2;
+    }
+  }
+  .custom-button {
+    /* 1. Reset default browser styles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+
+    /* 2. Visual appearance */
+
+    height: 64px;
+    width: 335px;
+    border-radius: 12px; /* Slightly rounded corners */
+    cursor: pointer; /* Changes cursor to a hand tool */
+  }
+  .ios-button {
+    margin-bottom: 16px;
+    @extend %text-preset-6;
+    margin-top: 48px;
+    background-color: $slate;
+    color: $white;
+    &::before {
+      content: ""; /* Required for the pseudo-element to render */
+      display: inline-block; /* Allows setting width and height */
+      flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+      width: 20px;
+      height: 20px;
+      margin-right: 5px; /* Adds space between the icon and text */
+      background-image: url("/img/icon-apple.svg");
+      background-size: contain; /* Ensures the icon fits the box scales */
+      background-repeat: no-repeat;
+      vertical-align: middle; /* Aligns it vertically with adjacent text */
+    }
+  }
+  .android-button {
+    background-color: $white;
+    color: $slate;
+    margin-bottom: 46px;
+    @extend %text-preset-6;
+    &::before {
+      content: ""; /* Required for the pseudo-element to render */
+      display: inline-block; /* Allows setting width and height */
+      flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+      width: 20px;
+      height: 20px;
+      margin-right: 5px; /* Adds space between the icon and text */
+      background-image: url("/img/icon-android.svg");
+      background-size: contain; /* Ensures the icon fits the box scales */
+      background-repeat: no-repeat;
+      vertical-align: middle; /* Aligns it vertically with adjacent text */
+    }
+  }
+}
+footer {
+  padding: 64px 12px;
+  height: 357px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p,
+  span {
+    @extend %text-preset-5;
+  }
+  p {
+    margin: 0px;
+  }
+  span {
+    font-weight: 900;
+  }
+  .social-media-buttons {
+    width: 120px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
   }
 }
