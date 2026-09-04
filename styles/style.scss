@@ -183,6 +183,7 @@ header {
 footer {
   padding: 64px 12px;
   height: 357px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -204,13 +205,42 @@ footer {
   }
 }
 @media (min-width: 768px) {
-  main,
-  header,
-  footer {
-    padding: 64 40px;
+  header {
+    position: relative;
+  }
+  header::after {
+    position: absolute;
+    content: "";
+    background-image: url("/img/bg-main-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 628px;
+    width: auto;
+  }
+  header::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 300px;
+    width: 266.67px;
+    right: -140px;
+    top: -50px;
+    background-image: url("/img/bg-pattern-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  header p:first-of-type {
+    width: 416px;
+    font-size: 64px;
+  }
+  header p:last-of-type {
+    width: 504px;
+    font-size: 18px;
   }
   .decorative-middle {
     border-radius: 16px;
+    z-index: 50;
     width: 680px;
     height: 600px;
     margin: 0 auto;
@@ -234,5 +264,24 @@ footer {
   }
   .main-cta .custom-button {
     width: 260px;
+  }
+  main,
+  header,
+  footer {
+    padding: 64px 40px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+  }
+  footer {
+    gap: 20px;
+    justify-content: center;
+    height: 137px;
+    margin: 64px 40px 80px 40px;
+  }
+  .social-media-buttons {
+    margin-left: 50px;
+    align-self: center;
   }
 }
