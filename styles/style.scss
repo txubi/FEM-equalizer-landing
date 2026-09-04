@@ -70,6 +70,7 @@ $yellow: rgb(255, 185, 100);
 }
 body {
   background-color: $white;
+  overflow-x: hidden;
 }
 .logo {
   width: 144px;
@@ -96,16 +97,35 @@ header {
 }
 .decorative-middle {
   background-color: $slate;
-  background-image: url("/img/bg-pattern-1.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 380px;
+  // background-image: url("/img/bg-pattern-1.svg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // height: 380px;
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  .clip {
+    overflow: hidden;
+    position: absolute;
+    height: 430px;
+    width: 380px;
+    .decorative-background {
+      margin: 0 auto;
+      background-image: url("/img/bg-pattern-1.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 465px;
+      width: 312px;
+      top: 0;
+      left: 0;
+    }
+  }
+
   img {
     height: 430px;
     transform: translateY(-100px);
+    z-index: 20;
   }
 }
 .main-cta {
@@ -126,6 +146,7 @@ header {
       @extend %text-preset-2;
     }
   }
+
   .custom-button {
     /* 1. Reset default browser styles */
     display: flex;
@@ -200,6 +221,7 @@ footer {
   .social-media-buttons {
     width: 120px;
     height: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -207,6 +229,7 @@ footer {
 @media (min-width: 768px) {
   header {
     position: relative;
+    background-image: none;
   }
   header::after {
     position: absolute;
@@ -216,7 +239,8 @@ footer {
     background-size: cover;
     display: inline-block;
     height: 628px;
-    width: auto;
+    width: 788px;
+    top: 0;
   }
   header::before {
     position: absolute;
@@ -256,8 +280,9 @@ footer {
     border-radius: 16px;
     height: 628px;
     width: 356px;
-    margin-top: -530px;
-    transform: translateX(300px);
+    z-index: 90;
+    margin-top: -490px;
+    transform: translateX(120px);
   }
   .button-bank {
     align-self: center;
@@ -269,6 +294,12 @@ footer {
   header,
   footer {
     padding: 64px 40px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .footer-content {
     display: flex;
