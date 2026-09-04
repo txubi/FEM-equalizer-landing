@@ -188,4 +188,36 @@ footer .social-media-buttons {
   justify-content: space-between;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (min-width: 768px) {
+  main,
+  header,
+  footer {
+    padding: 64 40px;
+  }
+  .decorative-middle {
+    border-radius: 16px;
+    width: 680px;
+    height: 600px;
+    margin: 0 auto;
+  }
+  .decorative-middle img {
+    height: 566px;
+    transform: translate(-150px, -90px);
+  }
+  .main-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+    height: 628px;
+    width: 356px;
+    margin-top: -530px;
+    transform: translateX(300px);
+  }
+  .button-bank {
+    align-self: center;
+  }
+  .main-cta .custom-button {
+    width: 260px;
+  }
+}/*# sourceMappingURL=style.css.map */
