@@ -1,4 +1,10 @@
-header p:first-of-type {
+$cyan: #66e2dc;
+$white: #fcfaf9;
+$orange: #fa7453;
+$slate: #191826;
+$yellow: rgb(255, 185, 100);
+
+%text-preset-1 {
   font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -8,8 +14,7 @@ header p:first-of-type {
   letter-spacing: -1px;
   line-height: 100%;
 }
-
-header p:last-of-type {
+%text-preset-4 {
   font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -23,23 +28,27 @@ header p:last-of-type {
 * {
   box-sizing: border-box;
 }
-
 header {
   background-color: #fafafa;
   background-image: url("/img/bg-main-mobile.png");
   background-size: 384px 655px;
   background-position: 120px -170px;
   padding: 64px 20px;
-  color: #191826;
+  color: $slate;
+  p {
+    &:first-of-type {
+      @extend %text-preset-1;
+      font-size: 40px;
+    }
+    &:last-of-type {
+      @extend %text-preset-4;
+      font-size: 16px;
+    }
+  }
 }
-header p:first-of-type {
-  font-size: 40px;
+.decorative-middle {
+  img {
+    height: 430px;
+    width: auto;
+  }
 }
-header p:last-of-type {
-  font-size: 16px;
-}
-
-.decorative-middle img {
-  height: 430px;
-  width: auto;
-}/*# sourceMappingURL=style.css.map */
