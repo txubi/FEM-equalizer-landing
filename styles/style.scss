@@ -351,19 +351,18 @@ footer {
       content: "";
       background-image: url("/img/bg-main-desktop.png");
       background-repeat: no-repeat;
-      background-size: 200%;
+      background-size: 1000px;
       display: inline-block;
       height: 655px;
       width: 380px;
-      top: 0;
-      right: 0;
+      top: 200px;
+      right: 200px;
     }
     &::before {
       width: 312px;
       height: 468px;
-      right: 120px;
       top: -45px;
-      right: 185px;
+      right: 0;
       background-image: url("/img/bg-pattern-1.svg");
     }
   }
