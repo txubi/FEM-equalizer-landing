@@ -313,7 +313,7 @@ footer .social-media-buttons {
 @media (min-width: 1024px) {
   header {
     width: 100%;
-    height: 594px;
+    height: 694px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -364,5 +364,8 @@ footer .social-media-buttons {
     height: 632px;
     transform: translateX(340px);
     margin-top: -510px;
+  }
+  .footer-content {
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=style.css.map */
