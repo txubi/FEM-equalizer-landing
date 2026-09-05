@@ -81,7 +81,7 @@ body {
 
 header {
   background-color: #fcfaf9;
-  background-image: url("/img/bg-main-mobile.png");
+  background-image: url("img/bg-main-mobile.png");
   background-size: 384px 655px;
   background-position: 120px -170px;
   padding: 64px 20px;
@@ -110,7 +110,7 @@ header p:last-of-type {
 }
 .decorative-middle .clip .decorative-background {
   margin: 0 auto;
-  background-image: url("/img/bg-pattern-1.svg");
+  background-image: url("img/bg-pattern-1.svg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 465px;
@@ -171,8 +171,8 @@ header p:last-of-type {
 }
 .main-cta .ios-button::before {
   background-color: #fcfaf9;
-  -webkit-mask-image: url("/img/icon-apple.svg");
-  mask-image: url("/img/icon-apple.svg");
+  -webkit-mask-image: url("img/icon-apple.svg");
+  mask-image: url("img/icon-apple.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -200,7 +200,7 @@ header p:last-of-type {
   width: 20px;
   height: 20px;
   margin-right: 5px; /* Adds space between the icon and text */
-  background-image: url("/img/icon-android.svg");
+  background-image: url("img/icon-android.svg");
   background-size: contain; /* Ensures the icon fits the box scales */
   background-repeat: no-repeat;
   vertical-align: middle; /* Aligns it vertically with adjacent text */
@@ -239,7 +239,7 @@ footer .social-media-buttons {
   header::after {
     position: absolute;
     content: "";
-    background-image: url("/img/bg-main-tablet.png");
+    background-image: url("img/bg-main-tablet.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
@@ -255,7 +255,7 @@ footer .social-media-buttons {
     width: 266.67px;
     right: -140px;
     top: -50px;
-    background-image: url("/img/bg-pattern-1.svg");
+    background-image: url("img/bg-pattern-1.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -348,7 +348,7 @@ footer .social-media-buttons {
   header::after {
     position: absolute;
     content: "";
-    background-image: url("/img/bg-main-desktop.png");
+    background-image: url("img/bg-main-desktop.png");
     background-repeat: no-repeat;
     background-size: 1000px;
     display: inline-block;
@@ -362,7 +362,7 @@ footer .social-media-buttons {
     height: 468px;
     top: -45px;
     right: 0;
-    background-image: url("/img/bg-pattern-1.svg");
+    background-image: url("img/bg-pattern-1.svg");
   }
   .decorative-middle {
     width: 1120px;
@@ -376,7 +376,7 @@ footer .social-media-buttons {
     width: 1120px;
   }
   .decorative-middle .clip .decorative-background {
-    background-image: url("/img/bg-pattern-2.svg");
+    background-image: url("img/bg-pattern-2.svg");
     margin: 0 auto;
   }
   .main-cta {
