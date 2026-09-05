@@ -315,7 +315,7 @@ footer .social-media-buttons {
     width: 1440px;
     height: 594px;
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   header p:first-of-type {
     font-size: 88px;
