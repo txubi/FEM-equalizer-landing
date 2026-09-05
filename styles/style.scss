@@ -409,7 +409,11 @@ footer {
     height: 632px;
     transform: translateX(280px);
     margin-top: -510px;
+    .custom-button {
+      width: 400px;
+    }
   }
+
   .footer-content {
     justify-content: space-around;
   }

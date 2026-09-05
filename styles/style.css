@@ -385,6 +385,9 @@ footer .social-media-buttons {
     transform: translateX(280px);
     margin-top: -510px;
   }
+  .main-cta .custom-button {
+    width: 400px;
+  }
   .footer-content {
     justify-content: space-around;
   }
