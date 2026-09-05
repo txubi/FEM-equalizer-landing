@@ -181,10 +181,29 @@ header {
       width: 20px;
       height: 20px;
       margin-right: 5px; /* Adds space between the icon and text */
-      background-image: url("/img/icon-apple.svg");
+      //background-image: url("/img/icon-apple.svg");
       background-size: contain; /* Ensures the icon fits the box scales */
       background-repeat: no-repeat;
       vertical-align: middle; /* Aligns it vertically with adjacent text */
+    }
+    &::before {
+      background-color: $white;
+      -webkit-mask-image: url("/img/icon-apple.svg");
+      mask-image: url("/img/icon-apple.svg");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      width: 20px;
+      height: 20px;
+    }
+    &:active,
+    &:hover {
+      &::before {
+        background-color: $slate;
+      }
+      color: $slate;
+      background-color: $cyan;
     }
   }
   .android-button {
@@ -204,6 +223,10 @@ header {
       background-size: contain; /* Ensures the icon fits the box scales */
       background-repeat: no-repeat;
       vertical-align: middle; /* Aligns it vertically with adjacent text */
+    }
+    &:active,
+    &:hover {
+      background-color: $yellow;
     }
   }
 }
@@ -384,7 +407,7 @@ footer {
   .main-cta {
     width: 482px;
     height: 632px;
-    transform: translateX(340px);
+    transform: translateX(280px);
     margin-top: -510px;
   }
   .footer-content {

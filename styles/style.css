@@ -165,10 +165,27 @@ header p:last-of-type {
   width: 20px;
   height: 20px;
   margin-right: 5px; /* Adds space between the icon and text */
-  background-image: url("/img/icon-apple.svg");
   background-size: contain; /* Ensures the icon fits the box scales */
   background-repeat: no-repeat;
   vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.main-cta .ios-button::before {
+  background-color: #fcfaf9;
+  -webkit-mask-image: url("/img/icon-apple.svg");
+  mask-image: url("/img/icon-apple.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  width: 20px;
+  height: 20px;
+}
+.main-cta .ios-button:active::before, .main-cta .ios-button:hover::before {
+  background-color: #191826;
+}
+.main-cta .ios-button:active, .main-cta .ios-button:hover {
+  color: #191826;
+  background-color: #66e2dc;
 }
 .main-cta .android-button {
   background-color: #fcfaf9;
@@ -187,6 +204,9 @@ header p:last-of-type {
   background-size: contain; /* Ensures the icon fits the box scales */
   background-repeat: no-repeat;
   vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.main-cta .android-button:active, .main-cta .android-button:hover {
+  background-color: rgb(255, 185, 100);
 }
 
 footer {
@@ -362,7 +382,7 @@ footer .social-media-buttons {
   .main-cta {
     width: 482px;
     height: 632px;
-    transform: translateX(340px);
+    transform: translateX(280px);
     margin-top: -510px;
   }
   .footer-content {
