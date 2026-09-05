@@ -331,3 +331,61 @@ footer {
     align-self: center;
   }
 }
+@media (min-width: 1024px) {
+  header {
+    width: 1440px;
+    height: 594px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    p:first-of-type {
+      font-size: 88px;
+      width: 928px;
+    }
+    p:last-of-type {
+      width: 736px;
+      font-size: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("/img/bg-main-desktop.png");
+      background-repeat: no-repeat;
+      background-size: 200%;
+      display: inline-block;
+      height: 655px;
+      width: 380px;
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      width: 312px;
+      height: 468px;
+      right: 120px;
+      top: -45px;
+      right: 185px;
+      background-image: url("/img/bg-pattern-1.svg");
+    }
+  }
+  .decorative-middle {
+    width: 1120px;
+    height: 600px;
+    img {
+      height: 642px;
+      transform: translate(-260px, -90px);
+    }
+    .clip {
+      width: 1120px;
+      .decorative-background {
+        background-image: url("/img/bg-pattern-2.svg");
+        margin: 0 auto;
+      }
+    }
+  }
+  .main-cta {
+    width: 482px;
+    height: 632px;
+    transform: translateX(340px);
+    margin-top: -510px;
+  }
+}
