@@ -69,6 +69,10 @@ footer span {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #fcfaf9;
   overflow-x: hidden;

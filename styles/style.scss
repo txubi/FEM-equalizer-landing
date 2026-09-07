@@ -68,6 +68,9 @@ $yellow: rgb(255, 185, 100);
 * {
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: $white;
   overflow-x: hidden;
